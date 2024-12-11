@@ -11,5 +11,6 @@ export default defineConfig({
     include: ['**\/*{test,spec}.?(c|m)[jt]s?(x)'],
     // ... Specify options here.
   },
+
   plugins: [tsconfigPaths()],
 });
