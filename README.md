@@ -6,7 +6,7 @@
 
 <br>
 
-## 📚 **강의 소개**
+## 📖 **강의 소개**
 
 실전부터 이론까지! 실무에 바로 적용할 수 있는 **TDD(Test-Driven Development)** 강의.
 최신 도구인 **Playwright**와 **Vitest**를 활용해 빠르고 효과적으로 테스트하는 방법을 배웁니다.
@@ -36,6 +36,19 @@
 - TDD를 이론이아니라 실제로 경험해보고 싶은분
 - Playwright, Vitest를 잘 활용하고 싶으신분
 - 기초적인 React나 Nextjs는 사용할줄 아시는 분
+
+<br>
+
+## 📚 **목차**
+
+1. 왜 TDD가 제일 빠른 개발 방식인가?
+2. 테스트 환경 구축하기 - Next.js, playwright, vitest(happy-dom) 설정하기
+3. 로그인 예제로 배우는 TDD 입문하기
+4. vitest로 효율적으로 테스트하기
+5. playwright로 효율적으로 테스트하기
+6. 테스트 설계 방법
+7. 게시판CRUD 예제로 배우는 실무 TDD
+8. 마치며
 
 <br>
 
