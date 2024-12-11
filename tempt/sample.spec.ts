@@ -1,5 +1,5 @@
 import { test, describe, expect } from 'vitest';
-import { drawStack, stacks } from './vitest';
+import { drawStack, stacks } from './sample';
 
 describe('draw', () => {
   test('if draw, return stack', () => {
