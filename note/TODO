@@ -27,11 +27,11 @@ Task:
   ☐ 작업 목록: @must @could @should @won't
     ☐ ui
     ☐ 이메일오류
-      ☐ 이메일 확인 함수 checkIsEmail()
+      ☐ 이메일 확인 함수 checkIsEmail() -> 순수함수
       ☐ 이메일 에러문구
     ☐ 제출버튼 비활성화
     ☐ 로그인 실패
-      ☐ signIn()
+      ☐ signIn() -> 비순수함수
     ☐ 로그인 성공
     ☐ 통합테스트
     ☐ 마무리
