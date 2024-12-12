@@ -1,3 +1,4 @@
+import { alertPromise } from '@__tests__/playwright/wait-for-alert-handler';
 import { test, expect } from '@playwright/test';
 
 test.describe('sign-in-user-form', () => {
@@ -25,7 +26,7 @@ test.describe('sign-in-user-form', () => {
     await expect(page.getByRole('button', { name: '로그인' })).toBeDisabled();
   });
 
-  // test('if sign-in fail, alert fail', async ({ page, context }) => {});
+  test('if sign-in fail, alert fail', async ({ page, context }) => {});
 
-  // test('if ok, alert success', async ({ page, context }) => {});
+  test('if ok, alert success', async ({ page, context }) => {});
 });

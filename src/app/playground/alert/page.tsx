@@ -4,13 +4,11 @@ import s from './styles.module.css';
 
 export default function Home() {
   useEffect(() => {
-    alert('hi');
+    alert('welcome');
   }, []);
   return (
     <main className={s.main}>
-      <h1 className={s.title}>
-        Next.js와 playwright, vitest로 실무 TDD 완벽 가이드 홈
-      </h1>
+      <h1 className={s.title}>Playground for WaitForAlertHandler</h1>
     </main>
   );
 }
