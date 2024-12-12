@@ -1,7 +1,3 @@
-import {
-  alertPromise,
-  waitForAlertHandler,
-} from '@__tests__/playwright/wait-for-alert-msg';
 import { test, expect } from '@playwright/test';
 
 test.describe('sign-in-user-form', () => {
