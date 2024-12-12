@@ -56,5 +56,6 @@
   &:disabled {
     background: #303030;
     color: #e0e0e0;
+    cursor: not-allowed;
   }
 }

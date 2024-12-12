@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import s from './styles.module.css';
 import { useInputText } from '@/hooks/use-input-text';
 import { useEmailErrorMsg } from './hooks/use-email-error-msg';
+import { useFormStatus } from './hooks/use-form-status';
 
 interface Props {
   className?: string;
@@ -12,6 +13,7 @@ export const UsersSignInForm = (props: Props) => {
   const { value: email, onChange: onChangeEmail } = useInputText('');
   const emailErrorMsg = useEmailErrorMsg(email);
   const { value: password, onChange: onChangePassword } = useInputText('');
+  const status = useFormStatus(emailErrorMsg);
 
   return (
     <form className={clsx(s.form, props.className)}>
@@ -29,7 +31,7 @@ export const UsersSignInForm = (props: Props) => {
           onChange={onChangeEmail}
         />
         <div className={s.emailErrorMsg}>
-          {emailErrorMsg !== undefined ? (
+          {typeof emailErrorMsg === 'string' ? (
             <span>{emailErrorMsg}</span>
           ) : (
             <span>&nbsp;</span>
@@ -50,7 +52,7 @@ export const UsersSignInForm = (props: Props) => {
           onChange={onChangePassword}
         />
       </div>
-      <button className={s.submit} type="button" disabled={false}>
+      <button className={s.submit} type="button" disabled={!status}>
         로그인
       </button>
     </form>
