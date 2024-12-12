@@ -1,4 +1,4 @@
-import { SignInForm } from '@/app/components/sign-in-form';
+import { SignInForm } from '@/components/sign-in-form';
 import s from './styles.module.css';
 
 export default function SignIn() {

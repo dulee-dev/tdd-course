@@ -1,19 +1,19 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": "a9d70fdb-91df-4ee6-b876-076ed19c6527",
       "email": "dulee.dev@gmail.com",
-      "password": "happyCoding!12"
-    },
-    {
-      "id": "2",
-      "email": "john@gmail.com",
       "password": "123123aa!"
     },
     {
-      "id": "3",
-      "email": "kim@gmail.com",
-      "password": "321321aa!"
+      "id": "c0b226a1-1ef1-4b24-be9b-3234bab6fb7f",
+      "email": "kim@frontierclubs.com",
+      "password": "123123aa!"
+    },
+    {
+      "id": "cfd363a5-5ad3-40ec-b4a6-bf5530f26b25",
+      "email": "lee@frontierclubs.com",
+      "password": "123123aa!"
     }
   ]
 }

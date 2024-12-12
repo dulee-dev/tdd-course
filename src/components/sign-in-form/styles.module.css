@@ -8,37 +8,38 @@
   }
 }
 
-.field {
+.fieldWithMsg {
   margin-bottom: 0.25rem;
 }
 
 .labelBox {
-  margin-bottom: 0.2rem;
-}
-
-.label {
+  margin-bottom: 0.25rem;
   font-size: small;
   font-weight: 600;
 }
 
+.label {
+  cursor: pointer;
+}
+
 .input {
+  width: 100%;
   background: transparent;
-  border: 0.1rem solid #707070;
+  border: 0.125rem solid #505050;
   padding: 0.5rem 0.5rem;
   border-radius: 0.25rem;
-  width: 100%;
 
   &:focus {
     outline: 0;
-    border-color: #e0e0e0;
+    border-color: #a0a0a0;
   }
 }
 
-.errorMsg {
-  line-height: 1.2;
-  color: #dc506c;
-  font-size: small;
+.emailErrorMsg {
   margin-top: 0.25rem;
+  font-size: small;
+  color: hotpink;
+  line-height: 1.2;
 }
 
 .submit {
@@ -46,14 +47,15 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 0.25rem;
-  background: #303030;
   border: 0;
-  cursor: not-allowed;
+  background-color: #ffffff;
   font-weight: 600;
-}
-
-.enabled {
-  background: #e0e0e0;
-  color: #000000;
   cursor: pointer;
+  color: #000000;
+
+  &:disabled {
+    background-color: #303030;
+    color: #ffffff;
+    cursor: not-allowed;
+  }
 }
