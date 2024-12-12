@@ -22,11 +22,11 @@ export const UsersSignInForm = (props: Props) => {
 
     if (response === false) {
       alert('로그인 실패');
-      return true;
+      return;
     }
 
     alert('로그인 성공');
-    return true;
+    return;
   };
 
   return (
