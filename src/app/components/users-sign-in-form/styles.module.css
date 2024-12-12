@@ -8,37 +8,37 @@
   }
 }
 
-.fieldWithMsg {
+.emailField {
   margin-bottom: 0.25rem;
 }
 
 .labelBox {
   margin-bottom: 0.25rem;
-  font-size: small;
-  font-weight: 600;
 }
 
 .label {
+  font-size: small;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .input {
   width: 100%;
-  background: transparent;
-  border: 0.125rem solid #505050;
+  background-color: transparent;
+  border: 0.125rem solid #303030;
   padding: 0.5rem 0.5rem;
   border-radius: 0.25rem;
 
   &:focus {
     outline: 0;
-    border-color: #a0a0a0;
+    border-color: #c0c0c0;
   }
 }
 
 .emailErrorMsg {
+  color: hotpink;
   margin-top: 0.25rem;
   font-size: small;
-  color: hotpink;
   line-height: 1.2;
 }
 
@@ -48,14 +48,13 @@
   padding-bottom: 0.5rem;
   border-radius: 0.25rem;
   border: 0;
-  background-color: #ffffff;
-  font-weight: 600;
   cursor: pointer;
-  color: #000000;
+  background: #e0e0e0;
+  font-weight: 600;
+  color: #000;
 
   &:disabled {
-    background-color: #303030;
-    color: #ffffff;
-    cursor: not-allowed;
+    background: #303030;
+    color: #e0e0e0;
   }
 }

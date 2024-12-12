@@ -5,24 +5,19 @@ interface Props {
   className?: string;
 }
 
-export const SignInForm = (props: Props) => {
+export const UsersSignInForm = (props: Props) => {
   return (
     <form className={clsx(s.form, props.className)}>
-      <div className={s.fieldWithMsg}>
+      <div className={s.emailField}>
         <div className={s.labelBox}>
           <label className={s.label} htmlFor="email">
             이메일
           </label>
         </div>
-        <input
-          className={s.input}
-          type="text"
-          id="email"
-          placeholder="test@domain.com"
-        />
+        <input className={s.input} type="text" id="email" />
         <div className={s.emailErrorMsg}>
-          {true ? (
-            <span>올바른 이메일 양식을 입력해주세요.</span>
+          {false ? (
+            <span>올바른 이메일양식을 입력해주세요.</span>
           ) : (
             <span>&nbsp;</span>
           )}
@@ -34,9 +29,9 @@ export const SignInForm = (props: Props) => {
             비밀번호
           </label>
         </div>
-        <input className={s.input} type="password" id="password" />
+        <input className={s.input} id="password" type="password" />
       </div>
-      <button className={s.submit} type="button" disabled>
+      <button className={s.submit} type="button" disabled={false}>
         로그인
       </button>
     </form>

@@ -1,10 +1,10 @@
-import { SignInForm } from '@/components/sign-in-form';
+import { UsersSignInForm } from '@/app/components/users-sign-in-form';
 import s from './styles.module.css';
 
 export default function SignIn() {
   return (
     <div>
-      <SignInForm className={s.form} />
+      <UsersSignInForm className={s.form} />
     </div>
   );
 }
