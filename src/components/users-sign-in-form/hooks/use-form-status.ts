@@ -4,7 +4,9 @@ export const useFormStatus = (emailErrorMsg: string | undefined | null) => {
   const [status, setStatus] = useState(false);
 
   useEffect(() => {
-    if (typeof emailErrorMsg === 'string' || emailErrorMsg === undefined) {
+    const isEmailError = typeof emailErrorMsg === 'string';
+    const isEmailIdle = emailErrorMsg === undefined;
+    if (isEmailError || isEmailIdle) {
       setStatus(false);
       return;
     }

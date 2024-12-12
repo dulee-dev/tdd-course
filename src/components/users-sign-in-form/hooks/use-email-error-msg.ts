@@ -9,12 +9,12 @@ export const useEmailErrorMsg = (email: string) => {
   );
 
   useEffect(() => {
-    const isEmail = checkIsEmail(email);
-    if (email.length === 0) {
+    const isIdle = email.length === 0;
+    if (isIdle) {
       setErrorMsg(undefined);
       return;
     }
-
+    const isEmail = checkIsEmail(email);
     if (!isEmail) {
       setErrorMsg(emailErrorMsg);
       return;
