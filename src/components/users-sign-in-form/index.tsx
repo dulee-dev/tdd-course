@@ -52,7 +52,12 @@ export const UsersSignInForm = (props: Props) => {
           onChange={onChangePassword}
         />
       </div>
-      <button className={s.submit} type="button" disabled={!status}>
+      <button
+        className={s.submit}
+        type="button"
+        disabled={!status}
+        onClick={onClickSubmit}
+      >
         로그인
       </button>
     </form>
