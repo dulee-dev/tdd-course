@@ -4,6 +4,8 @@ import s from './styles.module.css';
 import { useInputText } from '@/hooks/use-input-text';
 import { useEmailErrorMsg } from './hooks/use-email-error-msg';
 import { useFormStatus } from './hooks/use-form-status';
+import { MouseEventHandler } from 'react';
+import { signIn } from '@/effects/users-api.effect';
 
 interface Props {
   className?: string;
@@ -14,6 +16,18 @@ export const UsersSignInForm = (props: Props) => {
   const emailErrorMsg = useEmailErrorMsg(email);
   const { value: password, onChange: onChangePassword } = useInputText('');
   const status = useFormStatus(emailErrorMsg);
+
+  const onClickSubmit: MouseEventHandler<HTMLButtonElement> = async () => {
+    const response = await signIn({ email, password });
+
+    if (response === false) {
+      alert('로그인 실패');
+      return true;
+    }
+
+    alert('로그인 성공');
+    return true;
+  };
 
   return (
     <form className={clsx(s.form, props.className)}>
@@ -52,7 +66,12 @@ export const UsersSignInForm = (props: Props) => {
           onChange={onChangePassword}
         />
       </div>
-      <button className={s.submit} type="button" disabled={!status}>
+      <button
+        className={s.submit}
+        type="button"
+        disabled={!status}
+        onClick={onClickSubmit}
+      >
         로그인
       </button>
     </form>

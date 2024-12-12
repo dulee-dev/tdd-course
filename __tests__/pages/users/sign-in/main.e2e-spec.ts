@@ -1,7 +1,4 @@
-import {
-  alertPromise,
-  waitForAlertHandler,
-} from '@__tests__/playwright/wait-for-alert-msg';
+import { waitForAlertMsg } from '@__tests__/playwright/wait-for-alert-msg';
 import { test, expect } from '@playwright/test';
 
 test.describe('sign-in-user-form', () => {
@@ -29,7 +26,23 @@ test.describe('sign-in-user-form', () => {
     await expect(page.getByRole('button', { name: '로그인' })).toBeDisabled();
   });
 
-  // test('if sign-in fail, alert fail', async ({ page, context }) => {});
+  test('if sign-in fail, alert fail', async ({ page, context }) => {
+    const alertPromise = waitForAlertMsg(page);
 
-  // test('if ok, alert success', async ({ page, context }) => {});
+    await page.goto(pageUrl);
+    await page.getByLabel('이메일').fill('123sdf@sdfxcv.com');
+    await page.getByRole('button', { name: '로그인' }).click();
+    const msg = await alertPromise;
+    expect(msg).toEqual('로그인 실패');
+  });
+
+  test('if ok, alert success', async ({ page, context }) => {
+    const alertPromise = waitForAlertMsg(page);
+
+    await page.goto(pageUrl);
+    await page.getByLabel('이메일').fill('123sdf@sdfxcv.com');
+    await page.getByRole('button', { name: '로그인' }).click();
+    const msg = await alertPromise;
+    expect(msg).toEqual('로그인 성공');
+  });
 });
