@@ -1,7 +1,14 @@
-export const signIn = async ({}: {
+export const signIn = async ({
+  email,
+  password,
+}: {
   email: string;
   password: string;
 }): Promise<boolean> => {
-  return false;
-  // return true;
+  const url = `http://localhost:4000/users?email=${email}&password=${password}`;
+
+  const response = await fetch(url);
+  const result = await response.json();
+  const ok = result.length > 0;
+  return ok;
 };

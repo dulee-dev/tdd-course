@@ -23,7 +23,7 @@
     "test.playwright.ui": "npx playwright test --ui",
     "test.playwright.debug": "npx playwright test --debug",
     "------------------------------ setup ------------------------------": "",
-    "test-server": "tsx watch --tsconfig tsconfig.test-server.json test-server/index.ts",
+    "test-server": "json-server ./db/dev-1.json -p 4000",
     "db.seeding": "tsx ./__tests__/fixtures/seeding.ts",
     "db.truncate": "tsx ./__tests__/fixtures/truncate.ts",
     "db.reset": "npm run db.truncate && npm run db.seeding"

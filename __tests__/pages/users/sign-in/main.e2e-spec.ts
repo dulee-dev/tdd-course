@@ -40,7 +40,8 @@ test.describe('sign-in-user-form', () => {
     const alertPromise = waitForAlertMsg(page);
 
     await page.goto(pageUrl);
-    await page.getByLabel('이메일').fill('123sdf@sdfxcv.com');
+    await page.getByLabel('이메일').fill('dulee.dev@gmail.com');
+    await page.getByLabel('비밀번호').fill('123123aa!');
     await page.getByRole('button', { name: '로그인' }).click();
     const msg = await alertPromise;
     expect(msg).toEqual('로그인 성공');
