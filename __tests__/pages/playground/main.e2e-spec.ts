@@ -12,5 +12,6 @@ test.describe('playground', () => {
     await page.goto(pageUrl);
     const msg = await alertPromise;
     expect(msg).toEqual('welcome');
+    // await page.waitForTimeout(1000);
   });
 });
